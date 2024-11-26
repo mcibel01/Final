@@ -1,69 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boston Tix</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FitLife</title>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="GeneralStyle.css" />
 </head>
 <body>
-    <header class="hero">
-        <nav class="navbar">
-            <div class="logo">Boston Tix</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#browse">Browse Events</a></li>
-                <li><a href="#sell">Sell Tickets</a></li>
-                <li><a href="#about">About Us</a></li>
-            </ul>
+    <!-- Header Section -->
+    <header class="header-container">
+        <h1><a href="Home.html">FitLife</a></h1>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="aboutus.html">About Us</a>
+            <a href="products.html">Classes</a>
+            <a href="workouts.html">Workouts</a>
+            <a href="nutrition.html">Nutrition</a>
+            <a href="challenge.html">Challenge</a>
+            <a href="contact.html">Contact</a>
         </nav>
-        <div class="hero-content">
-            <h1>Boston Tix</h1>
-            <p>Connecting you to local events and experiences.</p>
-            <button class="cta-button">Discover Events</button>
-        </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h2>FitLife</h2>
+            <p>Learn how to stay healthy and live a FitLife</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
     <main>
-        <section id="features" class="features">
-            <div class="feature-card">
-                <h2>Secure Transactions</h2>
-                <p>Buy and sell tickets with confidence.</p>
-            </div>
-            <div class="feature-card">
-                <h2>Community Connection</h2>
-                <p>Support local artists and events.</p>
-            </div>
-            <div class="feature-card">
-                <h2>Event Discovery</h2>
-                <p>Find events tailored to your interests.</p>
+        <!-- About Us Section -->
+        <section class="about-us">
+            <h2>What is FitLife?</h2>
+            <p>Welcome to FitLife, where your wellness journey truly matters to us! 
+                We're here to empower you with everything you need to succeed—whether 
+                it's energizing workouts, balanced nutrition, or top-quality 
+                fitness products. Our goal is simple: to help you achieve your 
+                healthiest, happiest self. No matter where you are in your 
+                journey, we're by your side, guiding you every step of the way. 
+                Let's crush your goals together!</p>
+        </section>
+        
+        <!-- Workouts Section -->
+        <section class="workouts">
+            <h2>Workouts</h2>
+            <div class="workout-cards">
+                <div class="card">
+                    <h3>HIIT</h3>
+                    <p>High-intensity interval training to boost your stamina.</p>
+                </div>
+                <div class="card">
+                    <h3>Yoga</h3>
+                    <p>Enhance flexibility, balance, and mental clarity.</p>
+                </div>
+                <div class="card">
+                    <h3>Strength</h3>
+                    <p>Build muscle and increase overall strength.</p>
+                </div>
             </div>
         </section>
 
-        <section id="events" class="events">
-            <h2>Featured Events</h2>
-            <div class="event-list">
-                <div class="event-card">
-                    <h3>Jazz Night</h3>
-                    <p>Experience Boston's top jazz performers.</p>
-                    <button class="event-button">Buy Tickets</button>
+        <!-- Nutrition Tips Section -->
+        <section class="nutrition">
+            <h2>Nutrition Tips</h2>
+            <div class="nutrition-content">
+                <div class="nutrition-text">
+                    <ol>
+                        <li>Stay hydrated by drinking at least 8 cups of water daily.</li>
+                        <li>Include protein in every meal to boost metabolism and build muscle.</li>
+                        <li>Eat a variety of colorful fruits and vegetables for a range of nutrients.</li>
+                        <li>Choose whole grains like brown rice, quinoa, and oats for more fiber.</li>
+                        <li>Plan your meals in advance to avoid fast food and make healthier choices.</li>
+                        <li>Limit added sugars by opting for natural sweeteners like honey or fruit.</li>
+                        <li>Include healthy fats like avocados, nuts, and olive oil for better heart health.</li>
+                        <li>Eat smaller, more frequent meals to keep energy levels stable throughout the day.</li>
+                        <li>Avoid processed foods, opting for fresh, whole ingredients whenever possible.</li>
+                        <li>Start your day with a balanced breakfast to kickstart metabolism and energy levels.</li>
+                    </ol>
                 </div>
-                <div class="event-card">
-                    <h3>Art Exhibition</h3>
-                    <p>A showcase of Boston's vibrant art scene.</p>
-                    <button class="event-button">Buy Tickets</button>
+                <div class="nutrition-image">
+                    <img src="food1.jpeg" alt="Healthy Food" />
                 </div>
-                <div class="event-card">
-                    <h3>Local Theater</h3>
-                    <p>See the latest productions from local artists.</p>
-                    <button class="event-button">Buy Tickets</button>
-                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-container">
+            <div class="cta-section">
+                <h2>Join FitLife Today!</h2>
+                <p>Sign up for our newsletter to receive the latest fitness tips, product updates, and more!</p>
+                <form id="cta-form">
+                    <input type="email" id="cta-email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="button">Subscribe</button>
+                </form>
+                <p id="success-message" style="display: none;">Thank you for subscribing!</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2024 Boston Tix. All rights reserved.</p>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-nav">
+                <a href="aboutus.html">About Us</a>
+                <a href="products.html">Classes</a>
+                <a href="workouts.html">Workouts</a>
+                <a href="nutrition.html">Nutrition</a>
+                <a href="challenge.html">Challenge</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 FitLife.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
