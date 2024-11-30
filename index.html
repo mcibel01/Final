@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FitLife</title>
+    <title>Boston Tix</title>
 
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="GeneralStyle.css" />
@@ -13,7 +13,7 @@
 <body>
     <!-- Header Section -->
     <header class="header-container">
-        <h1><a href="Home.html">FitLife</a></h1>
+        <h1><a href="index.html">FitLife</a></h1>
 
         <!-- Navigation Bar -->
         <nav>
@@ -26,30 +26,29 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Banner Section -->
     <section class="banner">
-        <div class="banner-content">
-            <h2>FitLife</h2>
+        <div class="banner-text">
+            <h2>Boston Tix</h2>
             <p>Learn how to stay healthy and live a FitLife</p>
-            <button class="cta-button">Get Started</button>
         </div>
     </section>
 
     <!-- Main Content Section -->
     <main>
-        <!-- About Us Section -->
+        <!-- About Us Tips Section -->
         <section class="about-us">
             <h2>What is FitLife?</h2>
             <p>Welcome to FitLife, where your wellness journey truly matters to us! 
-                We're here to empower you with everything you need to succeed—whether 
+                We're here to empower you with everything you need to succeed-whether 
                 it's energizing workouts, balanced nutrition, or top-quality 
                 fitness products. Our goal is simple: to help you achieve your 
                 healthiest, happiest self. No matter where you are in your 
                 journey, we're by your side, guiding you every step of the way. 
                 Let's crush your goals together!</p>
         </section>
+        <!-- Featured Workouts Section -->
         
-        <!-- Workouts Section -->
         <section class="workouts">
             <h2>Workouts</h2>
             <div class="workout-cards">
@@ -68,26 +67,21 @@
             </div>
         </section>
 
-        <!-- Nutrition Tips Section -->
-        <section class="nutrition">
-            <h2>Nutrition Tips</h2>
-            <div class="nutrition-content">
-                <div class="nutrition-text">
-                    <ol>
-                        <li>Stay hydrated by drinking at least 8 cups of water daily.</li>
-                        <li>Include protein in every meal to boost metabolism and build muscle.</li>
-                        <li>Eat a variety of colorful fruits and vegetables for a range of nutrients.</li>
-                        <li>Choose whole grains like brown rice, quinoa, and oats for more fiber.</li>
-                        <li>Plan your meals in advance to avoid fast food and make healthier choices.</li>
-                        <li>Limit added sugars by opting for natural sweeteners like honey or fruit.</li>
-                        <li>Include healthy fats like avocados, nuts, and olive oil for better heart health.</li>
-                        <li>Eat smaller, more frequent meals to keep energy levels stable throughout the day.</li>
-                        <li>Avoid processed foods, opting for fresh, whole ingredients whenever possible.</li>
-                        <li>Start your day with a balanced breakfast to kickstart metabolism and energy levels.</li>
-                    </ol>
+        <!-- Products Section -->
+        <section class="products">
+            <h2>Class Packages</h2>
+            <div class="product-cards">
+                <div class="product-card">
+                    <img src="excersie1.jpeg" alt="Product 1">
+                    <h3>1 Class</h3>
                 </div>
-                <div class="nutrition-image">
-                    <img src="food1.jpeg" alt="Healthy Food" />
+                <div class="product-card">
+                    <img src="excersize3.jpeg" alt="Product 2">
+                    <h3>5 Classes</h3>
+                </div>
+                <div class="product-card">
+                    <img src="excersize2.jpeg" alt="Product 3">
+                    <h3>10 Classes</h3>
                 </div>
             </div>
         </section>
@@ -104,23 +98,39 @@
                 <p id="success-message" style="display: none;">Thank you for subscribing!</p>
             </div>
         </section>
-    </main>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-nav">
-                <a href="aboutus.html">About Us</a>
-                <a href="products.html">Classes</a>
-                <a href="workouts.html">Workouts</a>
-                <a href="nutrition.html">Nutrition</a>
-                <a href="challenge.html">Challenge</a>
-                <a href="contact.html">Contact</a>
+        <!-- jQuery Script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#cta-form').submit(function(event) {
+                    event.preventDefault(); // Prevent form submission
+                    $('#cta-form').fadeOut(500, function() { // Fade out form
+                        $('#success-message').fadeIn(500); // Fade in success message
+                    });
+                });
+            });
+        </script>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-content">
+            <!-- Footer Navigation Links -->
+                <div class="footer-nav">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="products.html">Classes</a>
+                    <a href="workouts.html">Workouts</a>
+                    <a href="nutrition.html">Nutrition</a>
+                    <a href="challenge.html">Challenge</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <!-- Copyright Info -->
+                <div class="footer-copy">
+                    <p>&copy; 2024 FitLife.</p>
+                </div>
             </div>
-            <div class="footer-copy">
-                <p>&copy; 2024 FitLife.</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </main>
 </body>
 </html>
