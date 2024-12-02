@@ -293,46 +293,41 @@ button:hover {
 /* Search Form Styling */
 .search-form {
     display: flex;
-    align-items: center; /* Center vertically */
-    margin-right: 700px; /* Push the form to the far right */
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px; /* Adjust the max width as needed */
 }
 
 .search-input {
-    padding: 5px 10px; /* Add padding inside the input */
-    border: 1px solid #CCC; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Adjust font size */
-    outline: none; /* Remove focus outline */
-    margin-right: 5px; /* Add space between input and button */  
-    width: 80%;
-    max-width: 300px;
+    width: 80%; /* Make the input wider */
+    padding: 15px; /* Increase padding for larger height */
+    font-size: 18px; /* Increase font size */
+    border: 2px solid #CCC;
+    border-radius: 5px 0 0 5px; /* Rounded left corners */
+    outline: none;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
-.search-input::placeholder {
-    color: #AAA; /* Placeholder text color */
+.search-input:focus {
+    border-color: #5D3FD3; /* Highlight border when focused */
 }
 
 .search-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    background-color: #917CED;
+    padding: 15px 20px; /* Increase button size */
+    font-size: 18px; /* Match the input font size */
+    background-color: #5D3FD3;
     color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px; /* Adjust size for the icon */
+    border: 2px solid #5D3FD3;
+    border-radius: 0 5px 5px 0; /* Rounded right corners */
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-button i {
-    margin: 0; /* Ensure no extra margin for the icon */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .search-button:hover {
-    background-color: #FFFFFF; /* Hover background */
-    color: #5D3FD3; /* Dark purple text on hover */
+    background-color: #917CED; /* Slightly lighter on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .hamburger-menu {
