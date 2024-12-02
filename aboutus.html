@@ -45,15 +45,6 @@
     <!-- Header Section -->
     <div id="header-container"></div>
 
-    <!-- JavaScript to Include Header -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => document.getElementById('header-container').innerHTML = data);
-        });
-    </script>
-
     <!-- About Us Section -->
     <section class="about-us">
         <div class="about-us-container">
@@ -118,5 +109,20 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript to Include Header and Footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header-container').innerHTML = data);
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        });
+    </script>
 </body>
 </html>
