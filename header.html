@@ -1,0 +1,64 @@
+<!-- Top Header Section -->
+<header class="top-header">
+    <section class="top-nav">
+        <div class="flag-container">
+            <img src="goodusa.webp" alt="American Flag" class="flag-icon">
+        </div>
+        <div class="top-nav-links">
+            <a href="#">Sign In/Register</a>
+            <a href="#">Support</a>
+        </div>
+    </section>
+</header>
+
+<!-- Header Section -->
+<header class="header-container">
+    <!-- Main Navigation Bar -->
+    <h1>
+        <a href="index.html">
+            <img src="logo.png" alt="Boston Tix" class="logo">
+        </a>
+    </h1>
+    
+    <form class="search-form" action="search.html" method="get">
+        <input type="text" name="query" placeholder="Search..." class="search-input">
+        <button type="submit" class="search-button">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+    
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <a href="aboutus.html">About Us</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="hamburger-dropdown">
+            <a href="aboutus.html">About Us</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hamburger Menu JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburgerIcon = document.querySelector(".hamburger-icon");
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+        hamburgerIcon.addEventListener("click", () => {
+            console.log("Hamburger icon clicked!"); // Debugging
+            hamburgerMenu.classList.toggle("open");
+            console.log("Class toggled:", hamburgerMenu.classList); // Check if "open" is added
+        });
+    });
+</script>

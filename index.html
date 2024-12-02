@@ -8,89 +8,109 @@
     <title>Boston Tix</title>
 
     <!-- Link to External CSS -->
-    <link rel="stylesheet" href="GeneralStyle.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Header Section -->
-    <header class="header-container">
-        <h1><a href="index.html">FitLife</a></h1>
-
-        <!-- Navigation Bar -->
-        <nav>
-            <a href="aboutus.html">About Us</a>
-            <a href="products.html">Classes</a>
-            <a href="workouts.html">Workouts</a>
-            <a href="nutrition.html">Nutrition</a>
-            <a href="challenge.html">Challenge</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <div id="header-container"></div>
+    <!-- JavaScript to Fetch Header -->
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener("DOMContentLoaded", () => {
+            // Fetch the header.html file
+            fetch('header.html')
+                .then(response => {
+                    if (!response.ok) throw new Error('Failed to fetch header.html');
+                    return response.text(); // Parse response as text
+                })
+                .then(data => {
+                    // Insert the content into the placeholder
+                    document.getElementById('header-container').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading header:', error);
+                });
+        });
+    </script>
 
     <!-- Banner Section -->
     <section class="banner">
         <div class="banner-text">
             <h2>Boston Tix</h2>
-            <p>Learn how to stay healthy and live a FitLife</p>
+            <p>Buy and resell tickets to local Boston shows</p>
         </div>
     </section>
 
     <!-- Main Content Section -->
     <main>
-        <!-- About Us Tips Section -->
-        <section class="about-us">
-            <h2>What is FitLife?</h2>
-            <p>Welcome to FitLife, where your wellness journey truly matters to us! 
-                We're here to empower you with everything you need to succeed-whether 
-                it's energizing workouts, balanced nutrition, or top-quality 
-                fitness products. Our goal is simple: to help you achieve your 
-                healthiest, happiest self. No matter where you are in your 
-                journey, we're by your side, guiding you every step of the way. 
-                Let's crush your goals together!</p>
-        </section>
-        <!-- Featured Workouts Section -->
-        
-        <section class="workouts">
-            <h2>Workouts</h2>
-            <div class="workout-cards">
-                <div class="card">
-                    <h3>HIIT</h3>
-                    <p>High-intensity interval training to boost your stamina.</p>
-                </div>
-                <div class="card">
-                    <h3>Yoga</h3>
-                    <p>Enhance flexibility, balance, and mental clarity.</p>
-                </div>
-                <div class="card">
-                    <h3>Strength</h3>
-                    <p>Build muscle and increase overall strength.</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Products Section -->
         <section class="products">
-            <h2>Class Packages</h2>
+            <h2>Popular categories</h2>
+             <!-- Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="any">All</button>
+                <button class="filter-btn" data-filter="weekend">Trending</button>
+                <button class="filter-btn" data-filter="week">Sports</button>
+                <button class="filter-btn" data-filter="week">Conecerts</button>
+                <button class="filter-btn" data-filter="week">Theater & Comedy</button>
+            </div>
             <div class="product-cards">
                 <div class="product-card">
                     <img src="excersie1.jpeg" alt="Product 1">
-                    <h3>1 Class</h3>
+                    <h3>Trending</h3>
                 </div>
                 <div class="product-card">
                     <img src="excersize3.jpeg" alt="Product 2">
-                    <h3>5 Classes</h3>
+                    <h3>Sports Events</h3>
                 </div>
                 <div class="product-card">
-                    <img src="excersize2.jpeg" alt="Product 3">
-                    <h3>10 Classes</h3>
+                    <img src="concert.jpg" alt="Product 3">
+                    <h3>Concerts</h3>
+                </div>
+                <div class="product-card">
+                    <img src="hamilton.jpg" alt="Product 4">
+                    <h3>Theater & Comedy</h3>
                 </div>
             </div>
         </section>
 
+        <!-- Whats Next Section -->
+        <section class="products">
+            <h2>Discover Whats popular</h2>
+             <!-- Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="any">All</button>
+                <button class="filter-btn" data-filter="weekend">Trending</button>
+                <button class="filter-btn" data-filter="week">Sports</button>
+                <button class="filter-btn" data-filter="week">Conecerts</button>
+                <button class="filter-btn" data-filter="week">Theater & Comedy</button>
+            </div>
+            <div class="product-cards">
+                <div class="product-card">
+                    <img src="h.jpeg" alt="Product 1">
+                    <h3>Sabrina Carpenter</h3>
+                </div>
+                <div class="product-card">
+                    <img src="h.jpeg" alt="Product 2">
+                    <h3>NFL</h3>
+                </div>
+                <div class="product-card">
+                    <img src="h.jpg" alt="Product 3">
+                    <h3>Wicked</h3>
+                </div>
+                <div class="product-card">
+                    <img src="h.jpg" alt="Product 4">
+                    <h3>Coldplay</h3>
+                </div>
+            </div>
+        </section>
+        <hr />
         <!-- Call to Action Section -->
         <section class="cta-container">
             <div class="cta-section">
-                <h2>Join FitLife Today!</h2>
-                <p>Sign up for our newsletter to receive the latest fitness tips, product updates, and more!</p>
+                <h2>Join Boston Tix Today!</h2>
+                <p>Sign up to recieve notifications when new events are posted and weekly newsletters!</p>
                 <form id="cta-form">
                     <input type="email" id="cta-email" name="email" placeholder="Enter your email" required>
                     <button type="submit" class="button">Subscribe</button>
@@ -118,10 +138,7 @@
             <!-- Footer Navigation Links -->
                 <div class="footer-nav">
                     <a href="aboutus.html">About Us</a>
-                    <a href="products.html">Classes</a>
-                    <a href="workouts.html">Workouts</a>
-                    <a href="nutrition.html">Nutrition</a>
-                    <a href="challenge.html">Challenge</a>
+                    <a href="events.html">Events</a>
                     <a href="contact.html">Contact</a>
                 </div>
 
