@@ -290,47 +290,6 @@ button:hover {
     border: 1px solid #FFFFFF; 
 }
 
-/* Search Form Styling */
-.search-form {
-    display: flex;
-    align-items: center;
-    position: relative; /* Use relative positioning */
-    left: -90px; /* Move it further left */
-    margin: 20px 0; /* Adjust vertical margins as needed */
-    width: 100%;
-    max-width: 600px;
-}
-
-.search-input {
-    width: 80%; 
-    padding: 15px; 
-    font-size: 18px; 
-    border: 2px solid #CCC;
-    border-radius: 5px 0 0 5px; 
-    outline: none;
-    box-sizing: border-box; 
-}
-
-.search-input:focus {
-    border-color: #5D3FD3;
-}
-
-.search-button {
-    padding: 15px 20px; 
-    font-size: 18px;
-    background-color: #5D3FD3;
-    color: #FFFFFF;
-    border: 2px solid #5D3FD3;
-    border-radius: 0 5px 5px 0; 
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.search-button:hover {
-    background-color: #917CED; 
-    transform: scale(1.05); 
-}
-
 .hamburger-menu {
     display: none; 
     position: relative; 
