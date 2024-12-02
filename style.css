@@ -294,11 +294,11 @@ button:hover {
 .search-form {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 20px auto;
+    position: relative; /* Use relative positioning */
+    left: 20px; /* Move it further left */
+    margin: 20px 0; /* Adjust vertical margins as needed */
     width: 100%;
-    text-align: left;
-    max-width: 600px; 
+    max-width: 600px;
 }
 
 .search-input {
