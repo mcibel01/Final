@@ -295,7 +295,7 @@ button:hover {
     display: flex;
     align-items: center;
     position: relative; /* Use relative positioning */
-    left: 20px; /* Move it further left */
+    left: 50px; /* Move it further left */
     margin: 20px 0; /* Adjust vertical margins as needed */
     width: 100%;
     max-width: 600px;
