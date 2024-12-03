@@ -636,49 +636,42 @@ button:hover {
 
 /* Auth Section Styling */
 .auth-section {
-    max-width: 800px;
+    max-width: 1000px;
     width: 90%;
-    margin: 20px auto;
-    padding: 30px;
     background: #fff;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
 }
 
 .auth-container h1 {
     font-size: 32px;
     color: #5D3FD3;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .auth-forms {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
-.auth-forms > div {
+.form-container {
     flex: 1;
-    min-width: 300px;
-}
-
-/* Forms */
-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 10px;
+    align-items: flex-start;
 }
 
 form input {
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s ease;
 }
 
 form input:focus {
@@ -687,14 +680,14 @@ form input:focus {
 }
 
 .auth-button {
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 16px;
     background-color: #5D3FD3;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .auth-button:hover {
@@ -703,31 +696,13 @@ form input:focus {
 
 /* Divider */
 .divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-    position: relative;
+    width: 2px;
+    background-color: #ddd;
+    margin: 0 20px;
+    align-self: stretch;
 }
 
-.divider span {
-    font-size: 14px;
-    color: #999;
-    background: #fff;
-    padding: 0 10px;
-    z-index: 1;
-}
-
-.divider:before,
-.divider:after {
-    content: '';
-    height: 1px;
-    background: #ccc;
-    flex: 1;
-    margin: 0 10px;
-}
-
-/* Success Popup */
+/* Popup Styling */
 .popup {
     display: flex;
     flex-direction: column;
@@ -737,29 +712,28 @@ form input:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ffffff;
+    background-color: #fff;
     border: 2px solid #5D3FD3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
     border-radius: 10px;
+    padding: 20px;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .popup p {
-    font-size: 18px;
-    color: #333333;
     margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
 }
 
 .popup button {
     padding: 10px 20px;
     font-size: 16px;
+    color: #fff;
     background-color: #5D3FD3;
-    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .popup button:hover {
@@ -771,29 +745,14 @@ form input:focus {
     display: none;
 }
 
-/* Footer Styling */
-footer {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #5D3FD3;
-    color: #fff;
-    text-align: center;
-    border-radius: 8px;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .auth-forms {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .divider {
+        display: none;
     }
 }

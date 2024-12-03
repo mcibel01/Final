@@ -21,7 +21,7 @@
             <h1>Welcome to Boston Tix</h1>
             <div class="auth-forms">
                 <!-- Sign In Form -->
-                <div class="sign-in-form">
+                <div class="form-container">
                     <h2>Sign In</h2>
                     <form id="signin-form">
                         <input type="email" name="email" placeholder="Email" required>
@@ -31,12 +31,10 @@
                 </div>
 
                 <!-- Divider -->
-                <div class="divider">
-                    <span>or</span>
-                </div>
+                <div class="divider"></div>
 
                 <!-- Sign Up Form -->
-                <div class="sign-up-form">
+                <div class="form-container">
                     <h2>Sign Up</h2>
                     <form id="signup-form">
                         <input type="text" name="name" placeholder="Full Name" required>
@@ -87,16 +85,23 @@
 
             const closeButtons = document.querySelectorAll(".close-popup");
 
+            // Clear form fields after submission
+            const clearFields = (form) => {
+                form.reset();
+            };
+
             // Show Sign Up popup
             signupForm.addEventListener("submit", (event) => {
                 event.preventDefault(); // Prevent page reload
                 signupPopup.classList.remove("hidden");
+                clearFields(signupForm); // Clear fields
             });
 
             // Show Sign In popup
             signinForm.addEventListener("submit", (event) => {
                 event.preventDefault(); // Prevent page reload
                 signinPopup.classList.remove("hidden");
+                clearFields(signinForm); // Clear fields
             });
 
             // Close Popups
