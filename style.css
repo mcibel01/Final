@@ -642,27 +642,29 @@ button:hover {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center heading and divider */
 }
 
 .auth-container h1 {
     font-size: 32px;
     color: #5D3FD3;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 30px;
 }
 
 .auth-forms {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
     gap: 20px;
 }
 
 .form-container {
     flex: 1;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 form input {
@@ -687,7 +689,6 @@ form input:focus {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .auth-button:hover {
@@ -698,7 +699,6 @@ form input:focus {
 .divider {
     width: 2px;
     background-color: #ddd;
-    margin: 0 20px;
     align-self: stretch;
 }
 
