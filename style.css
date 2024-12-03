@@ -634,15 +634,20 @@ button:hover {
 
 /* signin/signup page */ 
 
-/* Auth Section Styling */
+/* Authentication Section */
 .auth-section {
-    max-width: 1000px;
-    width: 90%;
-    background: #fff;
+    background-color: #f5f5f5;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.auth-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center heading and divider */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .auth-container h1 {
@@ -653,53 +658,74 @@ button:hover {
 
 .auth-forms {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
-.form-container {
+.sign-in-form, .sign-up-form {
     flex: 1;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: stretch;
+    max-width: 380px;
+    min-width: 300px;
 }
 
-form input {
+.auth-forms h2 {
+    font-size: 24px;
+    color: #5D3FD3;
+    margin-bottom: 20px;
+}
+
+.auth-forms form input {
     width: 100%;
     padding: 10px;
+    margin-bottom: 15px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #CCC;
     border-radius: 5px;
-    transition: border-color 0.3s ease;
 }
 
-form input:focus {
-    border-color: #5D3FD3;
-    outline: none;
-}
-
-.auth-button {
-    padding: 10px 20px;
+.auth-forms form button {
+    width: 100%;
+    padding: 12px;
     font-size: 16px;
     background-color: #5D3FD3;
-    color: #fff;
+    color: #FFFFFF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.auth-button:hover {
+.auth-forms form button:hover {
     background-color: #917CED;
 }
 
 /* Divider */
 .divider {
-    width: 2px;
-    background-color: #ddd;
-    align-self: stretch;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider span {
+    flex-grow: 1;
+    border-bottom: 1px solid #CCC;
+    margin: 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-forms {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sign-in-form, .sign-up-form {
+        max-width: 100%;
+    }
 }
 
 /* Popup Styling */
@@ -743,16 +769,4 @@ form input:focus {
 /* Hidden Class */
 .hidden {
     display: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .auth-forms {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .divider {
-        display: none;
-    }
 }
