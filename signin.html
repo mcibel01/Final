@@ -73,20 +73,20 @@
                 .then(response => response.text())
                 .then(data => document.getElementById('footer-container').innerHTML = data);
 
-            // Form validations and popup functionality
+            // Form submission and popup
             const signupForm = document.getElementById("signup-form");
             const successPopup = document.getElementById("success-popup");
             const closePopup = document.getElementById("close-popup");
 
             signupForm.addEventListener("submit", (event) => {
-                event.preventDefault(); // Prevent actual form submission
+                event.preventDefault(); // Prevent page reload or redirection
 
                 // Show success popup
                 successPopup.classList.remove("hidden");
             });
 
             closePopup.addEventListener("click", () => {
-                successPopup.classList.add("hidden"); // Close the popup
+                successPopup.classList.add("hidden"); // Close popup
             });
         });
     </script>
