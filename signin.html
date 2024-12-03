@@ -52,16 +52,21 @@
         </div>
     </section>
 
-    <!-- Success Popup -->
-    <div id="success-popup" class="hidden">
+    <!-- Popups -->
+    <div id="signup-success-popup" class="hidden popup">
         <p>Your account has been created successfully!</p>
-        <button id="close-popup">Close</button>
+        <button class="close-popup">Close</button>
+    </div>
+
+    <div id="signin-success-popup" class="hidden popup">
+        <p>You have signed in successfully!</p>
+        <button class="close-popup">Close</button>
     </div>
 
     <!-- Footer -->
     <div id="footer-container"></div>
 
-    <!-- JavaScript to Include Header and Footer -->
+    <!-- JavaScript -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Load header and footer
@@ -73,20 +78,32 @@
                 .then(response => response.text())
                 .then(data => document.getElementById('footer-container').innerHTML = data);
 
-            // Form submission and popup
+            // Form submission and popups
             const signupForm = document.getElementById("signup-form");
-            const successPopup = document.getElementById("success-popup");
-            const closePopup = document.getElementById("close-popup");
+            const signinForm = document.getElementById("signin-form");
 
+            const signupPopup = document.getElementById("signup-success-popup");
+            const signinPopup = document.getElementById("signin-success-popup");
+
+            const closeButtons = document.querySelectorAll(".close-popup");
+
+            // Show Sign Up popup
             signupForm.addEventListener("submit", (event) => {
-                event.preventDefault(); // Prevent page reload or redirection
-
-                // Show success popup
-                successPopup.classList.remove("hidden");
+                event.preventDefault(); // Prevent page reload
+                signupPopup.classList.remove("hidden");
             });
 
-            closePopup.addEventListener("click", () => {
-                successPopup.classList.add("hidden"); // Close popup
+            // Show Sign In popup
+            signinForm.addEventListener("submit", (event) => {
+                event.preventDefault(); // Prevent page reload
+                signinPopup.classList.remove("hidden");
+            });
+
+            // Close Popups
+            closeButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    button.parentElement.classList.add("hidden");
+                });
             });
         });
     </script>
