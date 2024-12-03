@@ -1,3 +1,69 @@
+<!-- Internal Stylesheet for Hamburger Menu -->
+<style>
+    /* Hamburger Menu */
+    .hamburger-menu {
+        display: none; /* Hidden by default */
+        position: relative;
+    }
+
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .hamburger-icon span {
+        display: block;
+        height: 3px;
+        width: 25px;
+        background-color: #FFFFFF;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger-dropdown {
+        display: none; /* Initially hidden */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #5D3FD3;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .hamburger-dropdown a {
+        display: block;
+        padding: 10px 15px;
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .hamburger-dropdown a:hover {
+        background-color: #917CED;
+    }
+
+    /* Media Query for Hamburger */
+    @media (max-width: 1085px) {
+        .main-nav {
+            display: none; /* Hide main navigation */
+        }
+
+        .hamburger-menu {
+            display: block; /* Show hamburger menu */
+        }
+    }
+
+    /* Open Hamburger Menu */
+    .hamburger-dropdown.open {
+        display: block; /* Show the dropdown menu when open */
+    }
+</style>
+
 <!-- Top Header Section -->
 <header class="top-header">
     <section class="top-nav">
@@ -46,12 +112,19 @@
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const hamburgerIcon = document.querySelector(".hamburger-icon");
-        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const mainNav = document.querySelector(".main-nav");
+        const hamburgerDropdown = document.querySelector(".hamburger-dropdown");
 
         hamburgerIcon.addEventListener("click", () => {
-            console.log("Hamburger icon clicked!"); // Debugging
-            hamburgerMenu.classList.toggle("open");
-            console.log("Class toggled:", hamburgerMenu.classList); // Check if "open" is added
+            // Toggle the dropdown visibility
+            hamburgerDropdown.classList.toggle("open");
+        
+            // Toggle visibility of the main navigation
+            if (hamburgerDropdown.classList.contains("open")) {
+                mainNav.style.display = "none";
+            } else {
+                mainNav.style.display = "flex";
+            }
         });
     });
 </script>
