@@ -228,12 +228,6 @@ button:hover {
     }
 }
 
-@media (max-width: 768px) {
-    .search-form {
-        display: none; 
-    }
-}
-
 /* Top Header */
 .top-header {
     width: 100%;
