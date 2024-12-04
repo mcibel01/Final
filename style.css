@@ -700,22 +700,20 @@ button:hover {
 
 /* MAIN PAGE ABOUT US */
 .experiential-addons {
-    background: #5D3FD3; 
     color: #FFFFFF;
     padding: 40px 20px;
     text-align: center;
     border-radius: 8px;
     margin: 20px auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
     width: 90%; /* Center section with limited width */
 }
 
 .experiential-addons .content h2 {
-    font-size: 2rem;
+    font-size: 25px;
     margin-bottom: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #000; /* Golden yellow for contrast */
+    color: #5D3FD3; /* Golden yellow for contrast */
     letter-spacing: 1px;
 }
 
@@ -724,5 +722,5 @@ button:hover {
     line-height: 1.6;
     margin: 0 auto;
     width: 80%; /* Center text within the section */
-    color: #FFFFFF;
+    color: #000;
 }
